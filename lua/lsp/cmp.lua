@@ -23,6 +23,8 @@ cmp.setup({
     -- For vsnip users.
     { name = "vsnip" },
 
+
+
     -- For luasnip users.
     -- { name = 'luasnip' },
 
@@ -31,7 +33,8 @@ cmp.setup({
 
     -- -- For snippy users.
     -- { name = 'snippy' },
-  }, { { name = "buffer" }, { name = "path" } }),
+  }, { { name = "buffer" }, { name = "path" },  { name = "cmdline", keyword_pattern = [=[[^[:blank:]\!]*]=]}
+        }),
 
   -- 快捷键设置
   mapping = require("keybindings").cmp(cmp),
